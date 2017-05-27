@@ -46,12 +46,10 @@ h1 {
 
 /**
  * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
  */
 
 figcaption,
-figure,
-main { /* 1 */
+figure {
   display: block;
 }
 
@@ -72,6 +70,14 @@ hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+main {
+  display: block;
 }
 
 /**
@@ -237,36 +243,33 @@ textarea {
 }
 
 /**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
+ * 1. Show the overflow in IE.
+ * 2. Remove the inheritance of text transform in Edge, Firefox, and IE.
  */
 
-button,
-input { /* 1 */
-  overflow: visible;
+button {
+  overflow: visible; /* 1 */
+  text-transform: none; /* 2 */
 }
 
 /**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
+ * Correct the inability to style clickable types in iOS and Safari.
  */
 
 button,
-select { /* 1 */
-  text-transform: none;
-}
-
-/**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-html [type="button"], /* 1 */
+[type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  -webkit-appearance: button;
+}
+
+/**
+ * Prevent a WebKit bug where (2) destroys native `audio` and `video` controls
+ * in Android 4.
+ */
+
+html [type="button"] {
+  -webkit-appearance: button;
 }
 
 /**
@@ -301,6 +304,14 @@ fieldset {
 }
 
 /**
+ * Show the overflow in Edge, IE.
+ */
+
+input {
+  overflow: visible;
+}
+
+/**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
@@ -324,6 +335,14 @@ legend {
 progress {
   display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+
+select {
+  text-transform: none;
 }
 
 /**
@@ -387,11 +406,17 @@ textarea {
    ========================================================================== */
 
 /*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
+ * Add the correct display in Edge, IE, and Firefox.
  */
 
-details, /* 1 */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in IE 9-.
+ */
+
 menu {
   display: block;
 }
