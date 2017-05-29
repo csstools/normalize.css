@@ -1,5 +1,13 @@
 # Changes to normalize.css
 
+### 7.0.0 (May 26, 2017)
+
+* Separate out selector targeted fixes for readability
+* Update browser landscape of abbr[title] fixes
+* Update browser landscape of details fixes
+* Correct browser landscape of displays
+* Remove sub and sup opinionated changes
+
 ### 6.0.0 (March 26, 2017)
 
 * Remove all opinionated rules
