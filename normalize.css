@@ -54,7 +54,7 @@ figure {
 }
 
 /**
- * Add the correct margin in IE 8.
+ * Add the correct margin in IE 8-.
  */
 
 figure {
@@ -305,7 +305,7 @@ fieldset {
 }
 
 /**
- * Show the overflow in Edge, IE.
+ * Show the overflow in Edge and IE.
  */
 
 input {
@@ -407,7 +407,7 @@ textarea {
    ========================================================================== */
 
 /*
- * Add the correct display in Edge, IE.
+ * Add the correct display in Edge and IE.
  */
 
 details {
