@@ -1,63 +1,43 @@
 # normalize.css
 
-<a href="https://github.com/necolas/normalize.css"><img
-  src="https://necolas.github.io/normalize.css/logo.svg" alt="Normalize Logo"
+<a href="https://github.com/jonathantneal/normalize.css"><img
+  src="https://jonathantneal.github.io/normalize.css/logo.svg" alt="normalize.css logo"
   width="80" height="80" align="right"></a>
 
-> A modern alternative to CSS resets
+[normalize.css] is a CSS library which provides cross-browser consistency in
+the default styling of HTML elements.
 
-[![npm][npm-image]][npm-url] [![license][license-image]][license-url]
-[![changelog][changelog-image]][changelog-url]
-[![gitter][gitter-image]][gitter-url]
-
-
-**NPM**
+## Usage
 
 ```sh
-npm install --save normalize.css
+npm install --save jonathantneal/normalize.css
 ```
-
-**Bower**
-
-```sh
-bower install --save normalize-css
-```
-
-**CDN**
-
-See https://cdnjs.com/libraries/normalize
 
 **Download**
 
-See https://necolas.github.io/normalize.css/latest/normalize.css
+See https://jonathantneal.github.io/normalize/latest/normalize.css
 
 
 ## What does it do?
 
-* Preserves useful defaults, unlike many CSS resets.
 * Normalizes styles for a wide range of elements.
 * Corrects bugs and common browser inconsistencies.
-* Improves usability with subtle modifications.
 * Explains what code does using detailed comments.
-
 
 ## Browser support
 
-* Chrome (last two)
-* Edge (last two)
-* Firefox (last two)
+* Chrome (last three)
+* Edge (last three)
+* Firefox (last three)
 * Firefox ESR
 * Internet Explorer 8+
-* iOS Safari (last two)
-* Opera (last two)
+* iOS Safari (last three)
+* Opera (last three)
 * Safari 6+
-* _[Normalize.css v1 provides legacy browser support](https://github.com/necolas/normalize.css/tree/v1) (IE 6+, Safari 4+), but is no longer actively developed._
-
-
 
 ## Extended details and known issues
 
-Additional detail and explanation of the esoteric parts of normalize.css.
+Additional detail and explanation of the esoteric parts of normalize.
 
 #### `pre, code, kbd, samp`
 
@@ -119,18 +99,7 @@ contribution process easy and effective for everyone involved.
 - [opinionate.css](https://github.com/adamgruber/opinionate.css) - Supplement to normalize, restores opinionated rules removed in v6
 - [sanitize.css](https://github.com/jonathantneal/sanitize.css) - Alternative to normalize, adheres to common developer expectations and preferences
 
-
 ## Acknowledgements
 
-Normalize.css is a project by [Nicolas Gallagher](https://github.com/necolas),
-co-created with [Jonathan Neal](https://github.com/jonathantneal).
-
-
-[changelog-image]: https://img.shields.io/badge/changelog-md-blue.svg?style=flat-square
-[changelog-url]: CHANGELOG.md
-[license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat-square
-[license-url]: LICENSE.md
-[npm-image]: https://img.shields.io/npm/v/normalize.css.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/normalize.css
-[gitter-image]: https://img.shields.io/badge/chat-gitter-blue.svg?style=flat-square
-[gitter-url]: https://gitter.im/necolas/normalize.css
+Normalize is a project by [Jonathan Neal](https://github.com/jonathantneal),
+co-created with [Nicolas Gallagher](https://github.com/necolas).
