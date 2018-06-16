@@ -1,37 +1,46 @@
 {
-  "name": "normalize.css",
-  "version": "7.0.0",
-  "description": "A modern alternative to CSS resets",
-  "main": "normalize.css",
-  "style": "normalize.css",
-  "files": [
-    "LICENSE.md",
-    "normalize.css"
-  ],
-  "devDependencies": {
-    "stylelint": "^7.9.0",
-    "stylelint-config-standard": "^16.0.0"
-  },
-  "scripts": {
-    "test": "stylelint normalize.css"
-  },
-  "repository": "jonathantneal/normalize.css",
+  "name": "@csstools/normalize.css",
+  "version": "8.0.0",
+  "description": "A cross-browser CSS foundation",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "contributors": [
     "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com/)",
     "Nicolas Gallagher <nicolas@nicolasgallagher.com> (http://nicolasgallagher.com/)"
   ],
-  "license": "MIT",
-  "bugs": "https://github.com/jonathantneal/normalize.css/issues",
-  "homepage": "https://jonathantneal.github.io/normalize.css",
+  "license": "CC0-1.0",
+  "repository": "csstools/normalize.css",
+  "homepage": "https://github.com/csstools/normalize.css#readme",
+  "bugs": "https://github.com/csstools/normalize.css/issues",
+  "main": "normalize.css",
+  "style": "normalize.css",
+  "files": [
+    "normalize.css"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "test": "stylelint normalize.css"
+  },
+  "devDependencies": {
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
       "font-family-no-duplicate-names": [
         true,
         {
-          "ignoreFontFamilyNames": ["monospace"]
+          "ignoreFontFamilyNames": [
+            "monospace"
+          ]
         }
       ]
     }
-  }
+  },
+  "keywords": [
+    "css",
+    "normalizes",
+    "browsers",
+    "fixes"
+  ]
 }

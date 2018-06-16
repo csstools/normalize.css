@@ -1,5 +1,16 @@
 # Changes to normalize.css
 
+### 8.0.0 (June 15, 2018)
+
+* Remove normalizations for unsupported browsers, such as Android 4-,
+  Chrome 57-, Firefox 52-, IE 8-, and Safari 7-.
+* Do not remove gaps on link underlines in iOS and Safari.
+* Reduce the selector weight on form control normalizations.
+* Do not remove the search input cancel button in Chrome and Safari.
+* Add dialog styles for Edge, IE, and Safari.
+* Update tests to test every single feature.
+* Update all documentation to be more clear and helpful.
+
 ### 7.0.0 (May 26, 2017)
 
 * Separate out selector targeted fixes for readability

@@ -1,46 +1,37 @@
 # Contributing to normalize.css
 
-Please take a moment to review this document in order to make the contribution
-process easy and effective for everyone involved.
+Please review this document in order to make the contribution process easy and
+effective for everyone involved.
 
 Following these guidelines helps to communicate that you respect the time of
-the developers managing and developing this open source project. In return,
-they should reciprocate that respect in addressing your issue or assessing
-patches and features.
-
+the developers managing and developing this project. In return, we will
+reciprocate that respect in addressing your issues, patches, and features.
 
 ## Using the issue tracker
 
-The issue tracker is the preferred channel for [bug reports](#bugs),
-[features requests](#features) and [submitting pull
+The issue tracker is the preferred channel for [bug reports](#bug-reports),
+[feature requests](#feature-requests) and [pull
 requests](#pull-requests), but please respect the following restrictions:
 
 * Please **do not** use the issue tracker for personal support requests.
-
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
 
-
 ## Bug reports
 
-A bug is a _demonstrable problem_ that is caused by the code in the repository.
-Good bug reports are extremely helpful - thank you!
+A bug is a _demonstrable problem_ caused by the code in this repository.
 
-Guidelines for bug reports:
+1. **Use the GitHub issue search** to see if the issue has
+   [already been reported].
 
-1. **Use the GitHub issue search** – check if the issue has already been
-   reported.
-
-2. **Check if the issue has been fixed** – try to reproduce it using the
+2. **Check if the issue has been fixed** by trying to reproduce it using the
    latest `master` branch in the repository.
 
-3. **Isolate the problem** – create a live example (e.g., on
-   [Codepen](http://codepen.io)) of a [reduced test
-   case](http://css-tricks.com/6263-reduced-test-cases/).
+3. **Isolate the problem** to create a [live example] of a [reduced test case].
 
 A good bug report shouldn't leave others needing to chase you up for more
-information. Please try to be as detailed as possible in your report. What is
-your environment? What steps will reproduce the issue? What browser(s) and OS
+information. Please be as detailed as possible in your report. What is your
+environment? What steps will reproduce the issue? What browser(s) and OS
 experience the problem? What would you expect to be the outcome? All these
 details will help people to fix any potential bugs.
 
@@ -62,14 +53,12 @@ Example:
 > causing the bug, and potential solutions (and your opinions on their
 > merits).
 
-
 ## Feature requests
 
-Feature requests are welcome. But take a moment to find out whether your idea
-fits with the scope and aims of the project. It's up to *you* to make a strong
-case to convince the project's developers of the merits of this feature. Please
+Feature requests are welcome. Take a moment to find out whether your idea fits
+with the scope and aims of the project. It's up to *you* to make a strong case
+to convince the project's developers of the merits of this feature. Please
 provide as much detail and context as possible.
-
 
 ## Pull requests
 
@@ -87,64 +76,52 @@ accurate comments, etc.) and any other requirements (such as test coverage).
 Follow this process if you'd like your work considered for inclusion in the
 project:
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) the project, clone your
-   fork, and configure the remotes:
-
+1. To begin: [fork this project], clone your fork, and add our upstream.
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/normalize.css
+   git clone git@github.com:YOUR_USER/normalize.css.git
+
    # Navigate to the newly cloned directory
    cd normalize.css
+
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/necolas/normalize.css
+   git remote add upstream git@github.com:csstools/normalize.css.git
+
+   # Install the tools necessary for testing
+   npm install
    ```
 
-2. If you cloned a while ago, get the latest changes from upstream:
-
+2. Create a branch for your feature or fix:
    ```bash
-   git checkout master
-   git pull upstream master
+   # Move into a new branch for your feature
+   git checkout -b feature/thing
+   ```
+   ```bash
+   # Move into a new branch for your fix
+   git checkout -b fix/something
    ```
 
-3. Never work directly on `master`. Create a new topic branch (off the latest
-   version of `master`) to contain your feature, change, or fix:
-
+3. If your code follows our practices, then push your feature branch:
    ```bash
-   git checkout -b <topic-branch-name>
-   ```
-
-4. Commit your changes in logical chunks. Please adhere to these [git commit
-   message conventions](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-   or your code is unlikely be merged into the main project. Use Git's
-   [interactive rebase](https://help.github.com/articles/interactive-rebase)
-   feature to tidy up your commits before making them public.
-
-   Be sure to test the `normalize.css` file for style conformance.
-
-   ```bash
+   # Test current code
    npm test
+   ```
+   ```bash
+   # Push the branch for your new feature
+   git push origin feature/thing
+   ```
+   ```bash
+   # Or, push the branch for your update
+   git push origin update/something
    ```
 
    Be sure to add a test to the `test.html` file if appropriate, and test
    your change in all supported browsers.
 
-5. Locally rebase the upstream development branch into your topic branch:
 
-   ```bash
-   git pull --rebase upstream master
-   ```
-
-6. Push your topic branch up to your fork:
-
-   ```bash
-   git push origin <topic-branch-name>
-   ```
-
-10. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description.
-
-**IMPORTANT**: By submitting a patch, you agree to allow the project owner to
-license your work under the same license as that used by the project.
+Now [open a pull request] with a clear title and description. Remember,
+by submitting a patch, you agree to allow the project owner to license your
+work under the same license as that used by the project.
 
 ### CSS Conventions
 
@@ -156,13 +133,12 @@ Keep the CSS file as readable as possible by following these guidelines:
   normalization obvious.
 - Comments begin with “Correct the...” when they deal with less obvious side
   effects.
-- Rules are sorted by cascade, specificity, and then alphabetic order.
-- Selectors are sorted by specificity and then alphabetic order.
+- Rules are sorted by section, cascade, specificity, and then alphabetic order.
+- Selectors are sorted by low-to-high specificity and then alphabetic order.
 - `in browser` applies to all versions.
-- `in browser v-` applies to all versions up to and including the version.
 - `in browser v+` applies to all versions after and including the version.
+- `in browser v-` applies to all versions up to and including the version.
 - `in browser v-v` applies to all versions including and between the versions.
-
 
 ## Maintainers
 
@@ -175,20 +151,19 @@ cutting new releases.
 2. Check that a patch has any necessary tests and a proper, descriptive commit
    message.
 3. Test the patch locally.
-4. Do not use GitHub's merge button. Apply the patch to `master` locally
-   (either via `git am` or by checking the whole branch out). Amend minor
-   problems with the author's original commit if necessary. Then push to GitHub.
+4. Use GitHub’s merge button with caution or apply the patch locally, squashing
+   any commits.
 
 ### Releasing a new version
 
-1. Include all new functional changes in the CHANGELOG.
-2. Use a dedicated commit to increment the version. The version needs to be
-   added to the CHANGELOG (inc. date), the `package.json`, and `normalize.css`
-   files.
-3. The commit message must be of `v0.0.0` format.
-4. Create an annotated tag for the version: `git tag -m "v0.0.0" 0.0.0`.
-5. Push the changes and tags to GitHub: `git push --tags origin master`
-6. Checkout the `gh-pages` branch and follow the instructions in the README.
+1. Include all new functional changes in CHANGELOG.md.
+2. Create an annotated tag for the version: `git tag -m "0.0.0" 0.0.0`.
+3. Push the changes and tags to GitHub: `git push --tags origin master`
+4. Update the `gh-pages` branch,
+   1. Copy the latest normalize.css and test.html from the master branch into
+      the root directory, the `latest` directory, and a new directory named
+      after the new version: `0.0.0`.
+   2. Update the normalize.css version and supported browsers in `index.html`.
 
 ### Semver strategy
 
@@ -202,6 +177,12 @@ are considered backwards-compatible and will result in a new **patch** release.
 
 No changes to CSS rules can add functionality in a backwards-compatible manner,
 therefore no changes are considered **minor**. For instance, a normalization on
-an element selector may override a user style on a universal selector, a
+an element selector may override a user style on a universal selector, or a
 change to `opacity` might cause [inputs to disappear](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/3901363/),
 or a change to `background-color` might cause [backgrounds to shrink](https://github.com/jonathantneal/sanitize.css/issues/42).
+
+[already been reported]: https://github.com/csstools/normalize.css/issues
+[fork this project]:     https://github.com/csstools/normalize.css/fork
+[live example]:          https://codepen.io/pen
+[open a pull request]:   https://help.github.com/articles/using-pull-requests/
+[reduced test case]:     https://css-tricks.com/reduced-test-cases/

@@ -2,7 +2,7 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Normalize CSS: UI tests</title>
+<title>normalize.css: tests</title>
 <script src="https://rawgit.com/aFarkas/html5shiv/gh-pages/dist/html5shiv.min.js"></script>
 <link rel="stylesheet" href="normalize.css">
 <style>
@@ -61,16 +61,6 @@
     text-transform: uppercase;
   }
 
-  /* Custom helpers */
-
-  /**
-   * Test whether the body's margin has been removed
-   */
-
-  body {
-    background: red;
-  }
-
   /**
    * Highlight the bounds of direct children of a test block
    */
@@ -81,71 +71,47 @@
 </style>
 
 <div class="Test">
-  .
-
-  <h1 class="Test-title"><a href="https://github.com/necolas/normalize.css">Normalize.css</a>: UI tests</h1>
+  <h1 class="Test-title"><a href="https://github.com/csstools/normalize.css">normalize.css</a>: tests</h1>
 
   <h2 class="Test-describe"><code>html</code></h2>
-  <h3 class="Test-it">should have sans-serif font family (opinionated)</h3>
-  <div class="Test-run">
-    abcdefghijklmnopqrstuvwxyz
-  </div>
   <h3 class="Test-it">should have a line height of 1.15</h3>
   <div class="Test-run">
     abcdefghijklmnopqrstuvwxyz
   </div>
-
-  <h2 class="Test-describe"><code>body</code></h2>
-  <h3 class="Test-it">should have no margin (opinionated)</h3>
+  <h3 class="Test-it">should not adjust font size after orientation changes</h3>
   <div class="Test-run">
-    (there should be no red background visible on this page)
+    abcdefghijklmnopqrstuvwxyz
   </div>
 
-  <h2 class="Test-describe">
-    <code>article</code>, <code>aside</code>, <code>details</code>,
-    <code>figure</code>, <code>figcaption</code>, <code>footer</code>,
-    <code>header</code>, <code>main</code>,
-    <code>menu</code>, <code>nav</code>, <code>section</code>,
-    <code>summary</code>
-  </h2>
-  <h3 class="Test-it">should render as block</h3>
+  <h2 class="Test-describe"><code>h1</code></h2>
+  <h3 class="Test-it">should not change size within an <code>article</code> or <code>section</code></h3>
+  <div class="Test-run">
+    <h1>Heading (control)</h1>
+    <article>
+      <h1>Heading (in article)</h1>
+    </article>
+    <section>
+      <h1>Heading (in section)</h1>
+    </section>
+  </div>
+
+  <h2 class="Test-describe"><code>hr</code></h2>
+  <h3 class="Test-it">should have a <code>content-box</code> box model</h3>
+  <div class="Test-run">
+    <hr style="height:2px; border:solid #ADD8E6; border-width:2px 0;">
+  </div>
+
+  <h2 class="Test-describe"><code>main</code></h2>
+  <h3 class="Test-it">should display as block</h3>
   <div class="Test-run Test-run--highlightEl">
-    <article>article</article>
-    <aside>aside</aside>
-    <details>
-      <summary>summary</summary>
-      details
-    </details>
-    <figure>
-      figure
-      <figcaption>figcaption</figcaption>
-    </figure>
-    <footer>footer</footer>
-    <header>header</header>
     <main>main</main>
-    <menu><li>menu</li></menu>
-    <nav>nav</nav>
-    <section>section</section>
   </div>
 
-  <h2 class="Test-describe"><code>audio</code>, <code>canvas</code>, <code>progress</code>, <code>video</code></h2>
-  <h3 class="Test-it">should render as inline-block and baseline-aligned</h3>
-  <div class="Test-run Test-run--highlightEl">
-    <audio controls>audio</audio>
-    <canvas>canvas</canvas>
-    <progress>progress</progress>
-    <video controls>video</video>
-  </div>
-
-  <h2 class="Test-describe"><code>audio:not([controls])</code>, <code>template</code>, <code>[hidden]</code></h2>
-  <h3 class="Test-it">should not display</h3>
-  <div class="Test-run Test-run--highlightEl">
-    <audio>audio</audio>
-    <template>
-      <h1>{{title}}</h1>
-      <content></content>
-    </template>
-    <p hidden>This should be hidden</p>
+  <h2 class="Test-describe"><code>pre</code></h2>
+  <h3 class="Test-it">should render text at the same absolute size as normal text</h3>
+  <div class="Test-run">
+    <span>span: abcdefghijklmnopqrstuvwxyz.</span><br>
+    <pre>pre: abcdefghijklmnopqrstuvwxyz.</pre>
   </div>
 
   <h2 class="Test-describe"><code>a</code></h2>
@@ -153,54 +119,27 @@
   <div class="Test-run">
     <a href="#non">dummy anchor</a>
   </div>
-  <h3 class="Test-it">should not skip underlines</h3>
-  <div class="Test-run">
-    <a href="#non">quip and jig</a>
-  </div>
-  <h3 class="Test-it">should not have a focus outline when both focused and hovered (opinionated)</h3>
-  <div class="Test-run">
-    <a href="#non">dummy anchor</a>
-  </div>
 
   <h2 class="Test-describe"><code>abbr[title]</code></h2>
-  <h3 class="Test-it">should have a dotted underline with a solid underline as a fallback</h3>
+  <h3 class="Test-it">should have a dotted underline text decoration with an underline fallback</h3>
   <div class="Test-run">
     <abbr title="abbreviation">abbr</abbr>
   </div>
 
   <h2 class="Test-describe"><code>b</code>, <code>strong</code></h2>
-  <h3 class="Test-it">should have bolder font-weight</h3>
+  <h3 class="Test-it">should have a bolder font-weight</h3>
   <div class="Test-run">
     <b>b</b>
     <strong>strong</strong>
   </div>
 
-  <h2 class="Test-describe"><code>dfn</code></h2>
-  <h3 class="Test-it">should have italic font-style</h3>
+  <h2 class="Test-describe"><code>code</code>, <code>kbd</code>, <code>samp</code></h2>
+  <h3 class="Test-it">should render text at the same absolute size as normal text</h3>
   <div class="Test-run">
-    <dfn>dfn</dfn>
-  </div>
-
-  <h2 class="Test-describe"><code>h1</code></h2>
-  <h3 class="Test-it">should not change size within an <code>article</code></h3>
-  <div class="Test-run">
-    <h1>Heading (control)</h1>
-    <article>
-      <h1>Heading (in article)</h1>
-    </article>
-  </div>
-  <h3 class="Test-it">should not change size within a <code>section</code></h3>
-  <div class="Test-run">
-    <h1>Heading (control)</h1>
-    <section>
-      <h1>Heading (in section)</h1>
-    </section>
-  </div>
-
-  <h2 class="Test-describe"><code>mark</code></h2>
-  <h3 class="Test-it">should have a yellow background</h3>
-  <div class="Test-run">
-    <mark>mark</mark>
+    <span>span: abcdefghijklmnopqrstuvwxyz.</span><br>
+    <code>code: abcdefghijklmnopqrstuvwxyz.</code><br>
+    <kbd>kbd: abcdefghijklmnopqrstuvwxyz.</kbd><br>
+    <samp>samp: abcdefghijklmnopqrstuvwxyz.</samp>
   </div>
 
   <h2 class="Test-describe"><code>small</code></h2>
@@ -209,12 +148,17 @@
     control. <small>small.</small>
   </div>
 
-  <h2 class="Test-describe"><code>sub</code> and <code>sup</code></h2>
-  <h3 class="Test-it">should not affect a line's visual line-height</h3>
-  <div class="Test-run Test-run--highlightEl">
-    <p>control.</p>
-    <p>control. <sub>sub.</sub></p>
-    <p>control. <sup>sup.</sup></p>
+  <h2 class="Test-describe"><code>audio</code>, <code>video</code></h2>
+  <h3 class="Test-it">should display as inline-block</h3>
+  <div class="Test-run">
+    <audio controls></audio>
+    <video controls></video>
+  </div>
+
+  <h2 class="Test-describe"><code>audio</code></h2>
+  <h3 class="Test-it">should not display</h3>
+  <div class="Test-run">
+    <audio></audio>
   </div>
 
   <h2 class="Test-describe"><code>img</code></h2>
@@ -234,33 +178,9 @@
     </svg>
   </div>
 
-  <h2 class="Test-describe"><code>code</code>, <code>kbd</code>, <code>pre</code>, <code>samp</code></h2>
-  <h3 class="Test-it">should render text at the same absolute size as normal text</h3>
-  <div class="Test-run">
-    <span>span: abcdefghijklmnopqrstuvwxyz.</span><br>
-    <code>code: abcdefghijklmnopqrstuvwxyz.</code><br>
-    <kbd>kbd: abcdefghijklmnopqrstuvwxyz.</kbd><br>
-    <samp>samp: abcdefghijklmnopqrstuvwxyz.</samp>
-    <pre>pre: abcdefghijklmnopqrstuvwxyz.</pre>
-  </div>
-
-  <h2 class="Test-describe"><code>figure</code></h2>
-  <h3 class="Test-it">should have margins</h3>
-  <div class="Test-run" style="outline:1px solid #ADD8E6; overflow:hidden;">
-    <figure>
-      <img style="background-color:#ADD8E6" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="400" height="200">
-    </figure>
-  </div>
-
-  <h2 class="Test-describe"><code>hr</code></h2>
-  <h3 class="Test-it">should have a <code>content-box</code> box model</h3>
-  <div class="Test-run" style="">
-    <hr style="height:2px; border:solid #ADD8E6; border-width:2px 0;">
-  </div>
-
   <h2 class="Test-describe"><code>button</code>, <code>input</code>, <code>optgroup</code>, <code>select</code>, <code>textarea</code></h2>
-  <h3 class="Test-it">should inherit <code>font-size</code> from ancestor</h3>
-  <div class="Test-run" style="font-size: 20px;">
+  <h3 class="Test-it">should have no margin</h3>
+  <div class="Test-run">
     <button>button</button><br>
     <input value="input"><br>
     <select style="border:1px solid #999;">
@@ -269,31 +189,6 @@
       </optgroup>
       <option>option</option>
     </select><br>
-    <textarea>textarea</textarea>
-  </div>
-  <h3 class="Test-it">should not have margins</h3>
-  <div class="Test-run" id="form-collection-margins">
-    <style>
-      #form-collection-margins {
-        outline: 1px solid #ADD8E6;
-        overflow: hidden;
-      }
-
-      #form-collection-margins button,
-      #form-collection-margins input,
-      #form-collection-margins select,
-      #form-collection-margins textarea {
-        display: block;
-      }
-    </style>
-    <button>button</button>
-    <input value="input">
-    <select style="border:1px solid #999;">
-      <optgroup label="optgroup">
-        <option>option</option>
-      </optgroup>
-      <option>option</option>
-    </select>
     <textarea>textarea</textarea>
   </div>
 
@@ -314,11 +209,10 @@
     <button>abcdefghijklmnopqrstuvwxyz</button>
   </div>
 
-  <h2 class="Test-describe"><code>button</code>, <code>select</code></h2>
+  <h2 class="Test-describe"><code>button</code></h2>
   <h3 class="Test-it">should not inherit <code>text-transform</code></h3>
   <div class="Test-run" style="text-transform:uppercase">
     <button>button</button>
-    <select><option>option</option></select>
   </div>
 
   <h2 class="Test-describe"><code>button</code> and button-style <code>input</code></h2>
@@ -339,15 +233,6 @@
     <p><input type="file" value="input (file)"></p>
     <p><input type="reset" value="input (reset)"></p>
     <p><input type="submit" value="input (submit)"></p>
-  </div>
-
-  <h2 class="Test-describe">disabled <code>button</code> and <code>input</code></h2>
-  <h3 class="Test-it">should have <code>default</code> cursor style</h3>
-  <div class="Test-run">
-    <p><button disabled>button</button></p>
-    <p><input disabled type="button" value="input (button)"></p>
-    <p><input disabled type="reset" value="input (reset)"></p>
-    <p><input disabled type="submit" value="input (submit)"></p>
   </div>
 
   <h2 class="Test-describe"><code>button</code>, <code>input</code></h2>
@@ -376,6 +261,12 @@
   </div>
 
   <h2 class="Test-describe"><code>legend</code></h2>
+  <h3 class="Test-it">should wrap text</h3>
+  <div class="Test-run">
+    <fieldset>
+      <legend>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</legend>
+    </fieldset>
+  </div>
   <h3 class="Test-it">should inherit color</h3>
   <div class="Test-run" style="color:#ADD8E6;">
     <fieldset>
@@ -388,11 +279,21 @@
       <legend>legend</legend>
     </fieldset>
   </div>
-  <h3 class="Test-it">should wrap text</h3>
+
+  <h2 class="Test-describe"><code>progress</code></h2>
+  <h3 class="Test-it">should display as inline-block</h3>
   <div class="Test-run">
-    <fieldset>
-      <legend>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</legend>
-    </fieldset>
+    <progress value="70" max="100">70%</progress>
+  </div>
+  <h3 class="Test-it">should have baseline alignment</h3>
+  <div class="Test-run">
+    abc <progress value="70" max="100">70%</progress> xyz
+  </div>
+
+  <h2 class="Test-describe"><code>select</code></h2>
+  <h3 class="Test-it">should not inherit <code>text-transform</code></h3>
+  <div class="Test-run" style="text-transform:uppercase">
+    <select><option>option</option></select>
   </div>
 
   <h2 class="Test-describe"><code>textarea</code></h2>
@@ -437,13 +338,31 @@
   <div class="Test-run">
     <input type="search" style="border:1px solid #ADD8E6; padding:10px; width:200px;">
   </div>
-  <h3 class="Test-it">should not have a cancel button in Safari or Chrome</h3>
+
+  <h2 class="Test-describe"><code>[type="file"]</code></h2>
+  <h3 class="Test-it">should be styleable</h3>
   <div class="Test-run">
-    <input type="search" value="search">
-  </div>
-  <h3 class="Test-it">should reference inherited color</h3>
-  <div class="Test-run">
-    <input type="text" placeholder="Text goes here" style="background-color: black; color: orange;">
+    <input type="file" style="border:1px solid #ADD8E6; padding:10px; width:200px;">
   </div>
 
+  <h2 class="Test-describe"><code>details</code></h2>
+  <h3 class="Test-it">should display as block</h3>
+  <div class="Test-run">
+    <details></details>
+  </div>
+
+  <h2 class="Test-describe"><code>dialog</code></h2>
+  <h3 class="Test-it">should be absolutely positioned</h3>
+  <div class="Test-run" style="position:relative;height:3em">
+    <dialog open>dialog</dialog>
+  </div>
+
+  <h2 class="Test-describe"><code>summary</code></h2>
+  <h3 class="Test-it">should display as list-item</h3>
+  <div class="Test-run">
+    <details>
+      <summary>Summary</summary>
+      <p>More information</p>
+    </details>
+  </div>
 </div>
