@@ -1,5 +1,10 @@
 # Changes to normalize.css
 
+### 8.1.0 (August 21, 2018)
+
+* Correct the cursor style of increment and decrement buttons in Safari.
+* Correct the text style of placeholders in Chrome, Edge, and Safari.
+
 ### 8.0.0 (June 15, 2018)
 
 * Remove normalizations for unsupported browsers, such as Android 4-,
