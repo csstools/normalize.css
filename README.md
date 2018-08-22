@@ -9,6 +9,35 @@ default styling of HTML elements.
 npm install --save @csstools/normalize.css
 ```
 
+### Usage in npm and webpack
+
+Import [normalize.css] in CSS:
+
+```css
+@import '~@csstools/normalize.css';
+```
+
+Alternatively, import [normalize.css] in JS:
+
+```js
+import '@csstools/normalize.css';
+```
+
+In `webpack.config.js`, be sure to use the appropriate loaders:
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
+  }
+}
+```
+
 **Download**
 
 See https://csstools.github.io/normalize.css/latest/normalize.css
