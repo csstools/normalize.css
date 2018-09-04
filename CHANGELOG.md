@@ -1,5 +1,13 @@
 # Changes to normalize.css
 
+### 9.0.1 (September 4, 2018)
+
+* Restore `::-moz-focus-inner` and `:-moz-focusring` normalizations
+  confirmed necessary in Firefox 61.
+* Sort the `::-webkit-inner-spin-button` and `::-webkit-outer-spin-button`
+  pseudo-class selectors.
+* Update tests.
+
 ### 9.0.0 (August 22, 2018)
 
 * Fix correction of cursor style of increment and decrement buttons

@@ -13,16 +13,18 @@
     counter-reset: test-describe;
   }
 
-  .Test-describe:before {
+  .Test-describe::before {
     content: counter(test-describe);
     counter-increment: test-describe;
   }
 
   .Test-describe {
     counter-reset: test-it;
+    font-size: 1.5em;
+    margin: 60px 0 20px;
   }
 
-  .Test-it:before {
+  .Test-it::before {
     content: counter(test-describe) "." counter(test-it);
     counter-increment: test-it;
   }
@@ -47,13 +49,8 @@
     padding: 0.75em 20px;
   }
 
-  .Test-describe {
-    font-size: 1.5em;
-    margin: 60px 0 20px;
-  }
-
-  .Test-describe:before,
-  .Test-it:before {
+  .Test-describe::before,
+  .Test-it::before {
     color: #999;
     display: inline-block;
     margin-right: 10px;
@@ -66,7 +63,7 @@
    */
 
   .Test-run--highlightEl > * {
-    outline: 1px solid #ADD8E6;
+    outline: 1px solid #add8e6;
   }
 </style>
 
@@ -98,7 +95,7 @@
   <h2 class="Test-describe"><code>hr</code></h2>
   <h3 class="Test-it">should have a <code>content-box</code> box model</h3>
   <div class="Test-run">
-    <hr style="height:2px; border:solid #ADD8E6; border-width:2px 0;">
+    <hr style="height:2px; border:solid #add8e6; border-width:2px 0;">
   </div>
 
   <h2 class="Test-describe"><code>main</code></h2>
@@ -129,8 +126,14 @@
   <h2 class="Test-describe"><code>b</code>, <code>strong</code></h2>
   <h3 class="Test-it">should have a bolder font-weight</h3>
   <div class="Test-run">
-    <b>b</b>
-    <strong>strong</strong>
+    <p>
+      <b>b</b>
+      <strong>strong</strong>
+    </p>
+    <p style="font-weight:300;">
+      <b>b</b>
+      <strong>strong from font-weight:300</strong>
+    </p>
   </div>
 
   <h2 class="Test-describe"><code>code</code>, <code>kbd</code>, <code>samp</code></h2>
@@ -166,7 +169,7 @@
   <div class="Test-run">
     <a href="#non">
       <!-- scaled-up 1px image -->
-      <img style="background-color:#ADD8E6" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100" height="100">
+      <img style="background-color:#add8e6; vertical-align:top;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100" height="100">
     </a>
   </div>
 
@@ -174,7 +177,7 @@
   <h3 class="Test-it">should not overflow</h3>
   <div class="Test-run Test-run--highlightEl">
     <svg width="100px" height="100px">
-      <circle cx="100" cy="100" r="100" fill="#ADD8E6" />
+      <circle cx="100" cy="100" r="100" fill="#add8e6" />
     </svg>
   </div>
 
@@ -198,10 +201,10 @@
     <style>
       #button-overflow button:after {
         content: "";
-        background: #ADD8E6;
+        background: #add8e6;
         display: inline-block;
         height: 10px;
-        position:relative;
+        position: relative;
         right: -20px;
         width: 10px;
       }
@@ -211,7 +214,7 @@
 
   <h2 class="Test-describe"><code>button</code></h2>
   <h3 class="Test-it">should not inherit <code>text-transform</code></h3>
-  <div class="Test-run" style="text-transform:uppercase">
+  <div class="Test-run" style="text-transform:uppercase;">
     <button>button</button>
   </div>
 
@@ -221,7 +224,7 @@
     <style>
       #button-like-style button,
       #button-like-style input {
-        background: #ADD8E6;
+        background: #add8e6;
         border: 2px solid black;
         border-radius: 2px;
         padding: 5px;
@@ -235,40 +238,23 @@
     <p><input type="submit" value="input (submit)"></p>
   </div>
 
-  <h2 class="Test-describe"><code>button</code>, <code>input</code></h2>
-  <h3 class="Test-it">should not have extra inner padding in Firefox</h3>
-  <div class="Test-run" id="button-input-padding">
-    <style>
-      #button-input-padding button,
-      #button-input-padding input {
-        border: 0;
-        padding: 0;
-        outline: 1px solid #ADD8E6;
-      }
-    </style>
-    <p><button>button</button></p>
-    <p><input type="button" value="input (button)"></p>
-    <p><input type="reset" value="input (reset)"></p>
-    <p><input type="submit" value="input (submit)"></p>
-  </div>
-
   <h2 class="Test-describe"><code>fieldset</code></h2>
   <h3 class="Test-it">should have consistent border, padding, and margin</h3>
   <div class="Test-run">
     <fieldset>
-      <div style="width:100%; height:100px; background:#ADD8E6;"></div>
+      <div style="width:100%; height:100px; background:#add8e6;"></div>
     </fieldset>
   </div>
 
   <h2 class="Test-describe"><code>legend</code></h2>
   <h3 class="Test-it">should wrap text</h3>
   <div class="Test-run">
-    <fieldset>
+    <fieldset style="width: 34em;">
       <legend>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</legend>
     </fieldset>
   </div>
   <h3 class="Test-it">should inherit color</h3>
-  <div class="Test-run" style="color:#ADD8E6;">
+  <div class="Test-run" style="color:#add8e6;">
     <fieldset>
       <legend>legend</legend>
     </fieldset>
@@ -292,7 +278,7 @@
 
   <h2 class="Test-describe"><code>select</code></h2>
   <h3 class="Test-it">should not inherit <code>text-transform</code></h3>
-  <div class="Test-run" style="text-transform:uppercase">
+  <div class="Test-run" style="text-transform:uppercase;">
     <select><option>option</option></select>
   </div>
 
@@ -313,7 +299,7 @@
 
       #radio-box-model input {
         width: 100%;
-        border: 5px solid #ADD8E6;
+        border: 5px solid #add8e6;
         display: block;
         position: relative;
       }
@@ -336,13 +322,34 @@
   <h2 class="Test-describe"><code>[type="search"]</code></h2>
   <h3 class="Test-it">should be styleable</h3>
   <div class="Test-run">
-    <input type="search" style="border:1px solid #ADD8E6; padding:10px; width:200px;">
+    <input type="search" style="border:1px solid #add8e6; padding:10px; width:200px;">
   </div>
 
-  <h2 class="Test-describe"><code>[type="file"]</code></h2>
+  <h2 class="Test-describe"><code>::placeholder</code></h2>
+  <h3 class="Test-it">placeholder should be styleable</h3>
+  <div class="Test-run">
+    <input type="text" placeholder="placeholder text" style="color: blue;">
+  </div>
+
+  <h2 class="Test-describe"><code>::file-upload-button</code></h2>
   <h3 class="Test-it">should be styleable</h3>
   <div class="Test-run">
-    <input type="file" style="border:1px solid #ADD8E6; padding:10px; width:200px;">
+    <input type="file" style="border:1px solid #add8e6; padding:10px; width:200px;">
+  </div>
+
+  <h2 class="Test-describe">::focus-inner, ::focusring</h2>
+  <h3 class="Test-it">should not have extra inner padding in Firefox</h3>
+  <div class="Test-run" id="button-input-padding">
+    <style>
+      #button-input-padding button,
+      #button-input-padding input {
+        padding: 10px 20px;
+      }
+    </style>
+    <p><button>button</button></p>
+    <p><input type="button" value="input (button)"></p>
+    <p><input type="reset" value="input (reset)"></p>
+    <p><input type="submit" value="input (submit)"></p>
   </div>
 
   <h2 class="Test-describe"><code>details</code></h2>
@@ -353,7 +360,7 @@
 
   <h2 class="Test-describe"><code>dialog</code></h2>
   <h3 class="Test-it">should be absolutely positioned</h3>
-  <div class="Test-run" style="position:relative;height:3em">
+  <div class="Test-run" style="position:relative; height:3em;">
     <dialog open>dialog</dialog>
   </div>
 
