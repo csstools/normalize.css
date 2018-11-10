@@ -1,6 +1,6 @@
-# normalize.css [<img src="https://camo.githubusercontent.com/0d1347e7b4ede3d714150c863a44c932f3c4d84e/68747470733a2f2f6e65636f6c61732e6769746875622e696f2f6e6f726d616c697a652e6373732f6c6f676f2e737667" alt="normalize" width="90" height="90" align="right">][normalize.css]
+# csstools-normalize [<img src="https://camo.githubusercontent.com/0d1347e7b4ede3d714150c863a44c932f3c4d84e/68747470733a2f2f6e65636f6c61732e6769746875622e696f2f6e6f726d616c697a652e6373732f6c6f676f2e737667" alt="normalize" width="90" height="90" align="right">][csstools-normalize]
 
-[normalize.css] is a CSS library that provides consistent, cross-browser
+[csstools-normalize] is a CSS library that provides consistent, cross-browser
 default styling of HTML elements.
 
 ## Usage
@@ -11,13 +11,13 @@ npm install --save @csstools/normalize.css
 
 ### Usage in npm and webpack
 
-Import [normalize.css] in CSS:
+Import [csstools-normalize] in CSS:
 
 ```css
 @import '~@csstools/normalize.css';
 ```
 
-Alternatively, import [normalize.css] in JS:
+Alternatively, import [csstools-normalize] in JS:
 
 ```js
 import '@csstools/normalize.css';
@@ -74,4 +74,4 @@ contribution process easy and effective for everyone involved.
 normalize.css is a project by [Jonathan Neal](https://github.com/jonathantneal),
 co-created with [Nicolas Gallagher](https://github.com/necolas).
 
-[normalize.css]: https://github.com/csstools/normalize.css
+[csstools-normalize]: https://github.com/csstools/normalize.css
