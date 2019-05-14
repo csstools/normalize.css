@@ -1,6 +1,6 @@
 {
   "name": "@csstools/normalize.css",
-  "version": "9.0.1",
+  "version": "9.0.2",
   "description": "A cross-browser CSS foundation",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "contributors": [
@@ -14,15 +14,16 @@
   "main": "normalize.css",
   "style": "normalize.css",
   "files": [
-    "normalize.css"
+    "normalize.css",
+    "opinionated.css"
   ],
   "scripts": {
     "prepublishOnly": "npm test",
-    "test": "stylelint normalize.css"
+    "test": "stylelint normalize.css opinionated.css"
   },
   "devDependencies": {
-    "stylelint": "^9.5.0",
-    "stylelint-config-standard": "^18.2.0"
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",

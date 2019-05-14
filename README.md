@@ -1,29 +1,35 @@
-# csstools-normalize [<img src="https://camo.githubusercontent.com/0d1347e7b4ede3d714150c863a44c932f3c4d84e/68747470733a2f2f6e65636f6c61732e6769746875622e696f2f6e6f726d616c697a652e6373732f6c6f676f2e737667" alt="normalize" width="90" height="90" align="right">][csstools-normalize]
+# @csstools/normalize.css [<img src="https://csstools.github.io/normalize.css/logo.svg" alt="normalize" width="90" height="90" align="right">][@csstools/normalize.css]
 
-[csstools-normalize] is a CSS library that provides consistent, cross-browser
-default styling of HTML elements.
+[@csstools/normalize.css] is a CSS library that provides consistent,
+cross-browser default styling of HTML elements.
 
 ## Usage
+
+```html
+<link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+```
+
+### Install
 
 ```sh
 npm install --save @csstools/normalize.css
 ```
 
-### Usage in npm and webpack
+#### Webpack Usage
 
-Import [csstools-normalize] in CSS:
+Import [@csstools/normalize.css] in CSS:
 
 ```css
 @import '~@csstools/normalize.css';
 ```
 
-Alternatively, import [csstools-normalize] in JS:
+Alternatively, import [@csstools/normalize.css] in JS:
 
 ```js
 import '@csstools/normalize.css';
 ```
 
-In `webpack.config.js`, be sure to use the appropriate loaders:
+In `webpack.config.js`, use the appropriate loaders:
 
 ```js
 module.exports = {
@@ -66,12 +72,20 @@ contribution process easy and effective for everyone involved.
 
 ## Similar Projects
 
-- [opinionate.css](https://github.com/adamgruber/opinionate.css) - A supplement to normalize.css with opinionated rules
-- [sanitize.css](https://github.com/csstools/sanitize.css) - An alternative to normalize.css, adhering to common developer expectations and preferences
+- [opinionate.css](https://github.com/adamgruber/opinionate.css) - A supplement
+to normalize.css with opinionated rules.
+- [sanitize.css](https://github.com/csstools/sanitize.css) - An alternative to
+normalize.css, adhering to common developer expectations and preferences
+- [remedy.css](https://github.com/csstools/sanitize.css) - An alternative to
+normalize.css, adhering to different common developer expectations and
+preferences.
+- [modern-normalize.css](https://github.com/csstools/sanitize.css) - An
+alternative to normalize.css, adhering to a minimal set of normalizations and
+common developer expectations and preferences.
 
 ## Acknowledgements
 
 normalize.css is a project by [Jonathan Neal](https://github.com/jonathantneal),
 co-created with [Nicolas Gallagher](https://github.com/necolas).
 
-[csstools-normalize]: https://github.com/csstools/normalize.css
+[@csstools/normalize.css]: https://github.com/csstools/normalize.css
