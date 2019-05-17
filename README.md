@@ -76,7 +76,7 @@ contribution process easy and effective for everyone involved.
 to normalize.css with opinionated rules.
 - [sanitize.css](https://github.com/csstools/sanitize.css) - An alternative to
 normalize.css, adhering to common developer expectations and preferences
-- [remedy.css](https://github.com/csstools/sanitize.css) - An alternative to
+- [remedy.css](https://github.com/mozdevs/cssremedy) - An alternative to
 normalize.css, adhering to different common developer expectations and
 preferences.
 - [modern-normalize.css](https://github.com/csstools/sanitize.css) - An
