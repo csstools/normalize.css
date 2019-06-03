@@ -18,7 +18,7 @@ html {
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
  */
 
 h1 {
@@ -30,25 +30,31 @@ h1 {
  * ========================================================================== */
 
 /**
- * Remove the margin on nested lists in Chrome and Safari.
+ * Remove the margin on nested lists in Chrome, Edge, IE, and Safari.
  */
 
 dl dl,
 dl ol,
 dl ul,
 ol dl,
+ul dl {
+  margin: 0;
+}
+
+/**
+ * Remove the margin on nested lists in Edge 18- and IE.
+ */
+
 ol ol,
 ol ul,
-ul dl,
 ul ol,
 ul ul {
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin: 0;
 }
 
 /**
  * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
+ * 2. Show the overflow in Edge 18- and IE.
  */
 
 hr {
@@ -87,7 +93,7 @@ a {
 }
 
 /**
- * Add the correct text decoration in Edge, IE, Opera, and Safari.
+ * Add the correct text decoration in Edge 18-, IE, and Safari.
  */
 
 abbr[title] {
@@ -176,7 +182,7 @@ select {
 
 /**
  * 1. Show the overflow in IE.
- * 2. Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 2. Remove the inheritance of text transform in Edge 18-, Firefox, and IE.
  */
 
 button {
@@ -204,7 +210,7 @@ fieldset {
 }
 
 /**
- * Show the overflow in Edge and IE.
+ * Show the overflow in Edge 18- and IE.
  */
 
 input {
@@ -212,7 +218,7 @@ input {
 }
 
 /**
- * 1. Correct the text wrapping in Edge and IE.
+ * 1. Correct the text wrapping in Edge 18- and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  */
 
@@ -225,8 +231,8 @@ legend {
 }
 
 /**
- * 1. Add the correct display in Edge and IE.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * 1. Add the correct display in Edge 18- and IE.
+ * 2. Add the correct vertical alignment in Chrome, Edge, and Firefox.
  */
 
 progress {
@@ -264,7 +270,7 @@ textarea {
 }
 
 /**
- * 1. Correct the odd appearance in Chrome and Safari.
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
  * 2. Correct the outline style in Safari.
  */
 
@@ -292,7 +298,7 @@ textarea {
 }
 
 /**
- * Remove the inner padding in Chrome and Safari on macOS.
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
  */
 
 ::-webkit-search-decoration {
@@ -338,7 +344,7 @@ textarea {
  * ========================================================================== */
 
 /*
- * Add the correct display in Edge and IE.
+ * Add the correct display in Edge 18- and IE.
  */
 
 details {
@@ -346,7 +352,7 @@ details {
 }
 
 /*
- * Add the correct styles in Edge, IE, and Safari.
+ * Add the correct styles in Edge 18-, IE, and Safari.
  */
 
 dialog {
