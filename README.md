@@ -79,7 +79,7 @@ normalize.css, adhering to common developer expectations and preferences
 - [remedy.css](https://github.com/mozdevs/cssremedy) - An alternative to
 normalize.css, adhering to different common developer expectations and
 preferences.
-- [modern-normalize.css](https://github.com/csstools/sanitize.css) - An
+- [modern-normalize.css](https://github.com/sindresorhus/modern-normalize) - An
 alternative to normalize.css, adhering to a minimal set of normalizations and
 common developer expectations and preferences.
 
