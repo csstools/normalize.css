@@ -55,12 +55,14 @@ ul ul {
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge 18- and IE.
+ * 3. Correct the inheritance of border color in Firefox.
  */
 
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
+  color: inherit; /* 3 */
 }
 
 /**
@@ -120,14 +122,6 @@ kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-
-/**
- * Correct the inheritance of border color in Firefox.
- */
-
-hr {
-  color: inherit;
 }
 
 /**
