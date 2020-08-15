@@ -123,6 +123,14 @@ samp {
 }
 
 /**
+ * Correct the inheritance of border color in Firefox.
+ */
+
+hr {
+  color: inherit;
+}
+
+/**
  * Add the correct font size in all browsers.
  */
 
