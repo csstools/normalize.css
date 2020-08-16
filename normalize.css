@@ -130,25 +130,6 @@ small {
   font-size: 80%;
 }
 
-/**
- * Remove text indentation from table contents in Chrome and Safari.
- */
-
-table {
-  text-indent: 0;
-}
-
-/**
- * Correct table border color inheritance in all browsers.
- */
-
-table,
-thead,
-tbody,
-tfoot {
-  border-color: inherit;
-}
-
 /* Embedded content
  * ========================================================================== */
 
@@ -184,6 +165,19 @@ img {
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+/* Tabular data
+ * ========================================================================== */
+
+/**
+ * 1. Remove text indentation from table contents in Chrome and Safari.
+ * 2. Correct table border color inheritance in all Chrome and Safari.
+ */
+
+table {
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
 }
 
 /* Forms
