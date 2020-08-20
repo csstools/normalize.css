@@ -1,5 +1,9 @@
 # Changes to @csstools/normalize.css
 
+### 11.0.1 (August 20, 2020)
+
+- Fixed: Used case-insensitive attribute selectors in the evergreen variations.
+
 ### 11.0.0 (August 20, 2020)
 
 - Added: Correct table border color inheritance in all Chrome, Edge, and Safari.
