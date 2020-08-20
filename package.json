@@ -5,7 +5,8 @@
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "contributors": [
     "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com/)",
-    "Nicolas Gallagher <nicolas@nicolasgallagher.com> (http://nicolasgallagher.com/)"
+    "Nicolas Gallagher <nicolas@nicolasgallagher.com> (http://nicolasgallagher.com/)",
+    "Luciano Battagliero <lucianobattagliero+git@gmail.com> (https://lucianobattagliero.com/)"
   ],
   "license": "CC0-1.0",
   "repository": "csstools/normalize.css",

@@ -89,6 +89,23 @@ preferences.
 - [sanitize.css](https://github.com/csstools/sanitize.css) - An alternative to
 normalize.css, adhering to common developer expectations and preferences.
 
+## Differences from `necolas/normalize.css`
+
+Nicolas Gallagher and I started writing normalize.css together. I named and
+created the normalize.css repository with the help of Paul Irish and Ben Alman.
+I transferred the repository to Necolas, who turned it into a “household” CSS
+library.
+
+Later, I resumed authorship of normalize.css with Luciano Battagliero. Together,
+we tagged, deprecated, and removed “opinionated” styles — styles developers
+often prefer but which do not fix bugs or “normalize” browser differences.
+
+Later, Necolas resumed authorship and the issue of whether to include or omit
+the opinionated styles forced us to split.
+
+I continue working on the normalize.css project, currently under the “csstools”
+tag. I hope one day our differences are resolved and the projects are one again.
+
 ## Acknowledgements
 
 normalize.css is a project by [Jonathan Neal](https://github.com/jonathantneal),
