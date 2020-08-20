@@ -15,7 +15,9 @@
   "style": "normalize.css",
   "files": [
     "normalize.css",
-    "opinionated.css"
+    "evergreen.css",
+    "opinionated.css",
+    "opinionated.evergreen.css"
   ],
   "scripts": {
     "prepublishOnly": "npm test",
