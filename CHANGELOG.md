@@ -1,5 +1,13 @@
 # Changes to @csstools/normalize.css
 
+### 11.0.0 (August 20, 2020)
+
+- Added: Correct table border color inheritance in all Chrome, Edge, and Safari.
+- Added: Remove text indentation from table contents in Chrome, Edge, and
+  Safari.
+- Added: Correct the inheritance of border color in Firefox.
+- Added: Evergreen variations of normalize.css (basically, without IE support).
+
 ### 10.1.0 (June 3, 2019)
 
 - Fixed: `Edge` comments without `Chrome` are are changed to `Edge 18-`.
@@ -98,7 +106,7 @@
 - Changed: Moved unsorted rules into their respective sections.
 - Changed: Explicitly defined font resets on form controls.
 - Updated: `summary` style in all browsers.
-- Updated: Text-size-adjust documentation  for IE on Windows Phone
+- Updated: Text-size-adjust documentation for IE on Windows Phone
 - Updated: OS X reference to macOS
 - Updated: Semver strategy.
 

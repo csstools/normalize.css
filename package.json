@@ -1,6 +1,6 @@
 {
   "name": "@csstools/normalize.css",
-  "version": "10.1.0",
+  "version": "11.0.0",
   "description": "A cross-browser CSS foundation",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "contributors": [
@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "prepublishOnly": "npm test",
-    "test": "stylelint normalize.css opinionated.css"
+    "test": "stylelint normalize.css evergreen.css opinionated.css opinionated.evergreen.css"
   },
   "devDependencies": {
     "stylelint": "^13.6.1",
