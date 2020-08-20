@@ -22,8 +22,8 @@
     "test": "stylelint normalize.css opinionated.css"
   },
   "devDependencies": {
-    "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0"
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
