@@ -171,13 +171,13 @@ svg:not(:root) {
  * ========================================================================== */
 
 /**
- * 1. Remove text indentation from table contents in Chrome and Safari.
- * 2. Correct table border color inheritance in all Chrome and Safari.
+ * 1. Correct table border color inheritance in all Chrome and Safari.
+ * 2. Remove text indentation from table contents in Chrome and Safari.
  */
 
 table {
-	text-indent: 0; /* 1 */
-	border-color: inherit; /* 2 */
+  border-color: inherit; /* 1 */
+  text-indent: 0; /* 2 */
 }
 
 /* Forms
