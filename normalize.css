@@ -225,14 +225,6 @@ fieldset {
 }
 
 /**
- * Show the overflow in Edge 18- and IE.
- */
-
-input {
-  overflow: visible;
-}
-
-/**
  * 1. Correct the text wrapping in Edge 18- and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  */
