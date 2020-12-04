@@ -1,5 +1,11 @@
 # Changes to @csstools/normalize.css
 
+### HEAD
+
+- Changed: Evergreen variations of normalize.css contribute no specificity.
+- Removed: `fieldset` padding in Firefox is no longer needed.
+- Removed: `text-size-adjust` is no longer needed.
+
 ### 11.0.1 (August 20, 2020)
 
 - Fixed: Used case-insensitive attribute selectors in the evergreen variations.
