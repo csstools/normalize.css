@@ -71,6 +71,13 @@ See https://csstools.github.io/normalize.css/latest/normalize.css
 * iOS Safari (last 2)
 * Internet Explorer 9+
 
+## Versions
+
+* __normalize.css__ - resolves bugs and common browser inconsistencies
+* __opinionated.css__ - does the same while preserving the classic opinionated styles
+* __evergreen.css__ - evergreen variations of normalize.css (basically, without IE support)
+* __opinionated.evergreen.css__ - evergreen variations of opinionated
+
 ## Contributing
 
 Please read the [contribution guidelines](CONTRIBUTING.md) in order to make the
