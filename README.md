@@ -9,12 +9,6 @@ cross-browser default styling of HTML elements.
 <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
 ```
 
-Or to exclusively support evergreen browsers.
-
-```html
-<link href="https://unpkg.com/@csstools/normalize.css/evergreen.css" rel="stylesheet" />
-```
-
 ## Install
 
 ```sh
@@ -67,9 +61,8 @@ See https://csstools.github.io/normalize.css/latest/normalize.css
 * Firefox (last 3)
 * Firefox ESR
 * Opera (last 3)
-* Safari (last 3)
+* Safari (last 2)
 * iOS Safari (last 2)
-* Internet Explorer 9+
 
 ## Contributing
 
