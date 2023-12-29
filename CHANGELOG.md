@@ -1,5 +1,10 @@
 # Changes to @csstools/normalize.css
 
+### 12.1.0 (December 29, 2023)
+
+- Added: `text-size-adjust` [#25](https://github.com/csstools/normalize.css/issues/25)
+- Fixed: group `pre` with `code`, `kbd`, `samp` [#24](https://github.com/csstools/normalize.css/issues/24)
+
 ### 12.0.0 (September 15, 2021)
 
 - Changed: normalize.css no longer contributes specificity.
