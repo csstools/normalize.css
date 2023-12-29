@@ -21,23 +21,6 @@
   "scripts": {
     "test": "echo \"no test\""
   },
-  "devDependencies": {
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "font-family-no-duplicate-names": [
-        true,
-        {
-          "ignoreFontFamilyNames": [
-            "monospace"
-          ]
-        }
-      ]
-    }
-  },
   "keywords": [
     "css",
     "normalizes",

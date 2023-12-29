@@ -86,14 +86,14 @@ normalize.css, adhering to common developer expectations and preferences.
 
 Nicolas Gallagher and I started writing normalize.css together. I named and
 created the normalize.css repository with the help of Paul Irish and Ben Alman.
-I transferred the repository to Necolas, who turned it into a “household” CSS
+I transferred the repository to Nicolas, who turned it into a “household” CSS
 library.
 
 Later, I resumed authorship of normalize.css with Luciano Battagliero. Together,
 we tagged, deprecated, and removed “opinionated” styles — styles developers
 often prefer but which do not fix bugs or “normalize” browser differences.
 
-Later, Necolas resumed authorship and the issue of whether to include or omit
+Later, Nicolas resumed authorship and the issue of whether to include or omit
 the opinionated styles forced us to split.
 
 I continue working on the normalize.css project, currently under the “csstools”
