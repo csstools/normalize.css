@@ -10,7 +10,7 @@ export async function removeAllReleaseDirs() {
 }
 
 async function findAllReleaseDirs() {
-	const dir = path.resolve('.');
+	const dir = path.resolve('docs');
 	const dirents = await fs.readdir(dir, { withFileTypes: true });
 	const releaseDirs = dirents.map((dirent) => {
 		const res = path.resolve(dir, dirent.name);
