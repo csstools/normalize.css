@@ -1,5 +1,9 @@
 # Changes to @csstools/normalize.css
 
+### 12.1.1 (December 29, 2023)
+
+- Fixed: normalize `text-size-adjust` in the most backwards compatible way.
+
 ### 12.1.0 (December 29, 2023)
 
 - Added: `text-size-adjust` [#25](https://github.com/csstools/normalize.css/issues/25)
